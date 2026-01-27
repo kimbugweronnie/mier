@@ -91,6 +91,8 @@
                         Get Started
                     </a>
                 </div>
+                
+                
 
                 <div class="md:hidden">
                     <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-700">
@@ -218,8 +220,8 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <div class="bg-gradient-to-br from-white-50 to-green-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                         </svg>
@@ -228,8 +230,8 @@
                     <p class="text-gray-600">Beautiful charts and real-time statistics to visualize your spending patterns.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <div class="bg-gradient-to-br from-white-50 to-green-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                         </svg>
@@ -238,7 +240,7 @@
                     <p class="text-gray-600">Set up automatic recurring expenses that are generated based on your schedule.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                <div class="bg-gradient-to-br from-white-50 to-green-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
                     <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
@@ -249,7 +251,7 @@
                 </div>
 
                 <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
@@ -259,7 +261,7 @@
                 </div>
 
                 <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
                         </svg>
@@ -269,7 +271,7 @@
                 </div>
 
                 <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
@@ -282,7 +284,7 @@
     </section>
 
     <!-- TALL Stack Showcase -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    {{-- <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Built with the TALL Stack</h2>
@@ -323,7 +325,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- CTA Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg">
@@ -347,15 +349,14 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <svg class="h-8 w-8 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="h-8 w-8 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
                             <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
                         </svg>
-                        <span class="ml-2 text-xl font-bold">ExpenseFlow</span>
+                        <span class="ml-2 text-xl font-bold">Mier</span>
                     </div>
-                    <p class="text-gray-400">Smart expense tracking for everyone.</p>
-                </div>
-                
+                    <p class="text-gray-400"> One platform. Your people. Your projects</p>
+                </div>    
                 <div>
                     <h4 class="font-bold mb-4">Product</h4>
                     <ul class="space-y-2 text-gray-400">
