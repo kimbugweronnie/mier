@@ -227,7 +227,7 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Interactive Dashboard</h3>
-                    <p class="text-gray-600">Beautiful charts and real-time statistics to visualize your spending patterns.</p>
+                    <p class="text-gray-600">Beautiful charts and real-time statistics to visualize project executions,submitions and reporting</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-white-50 to-green-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
@@ -236,8 +236,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Recurring Expenses</h3>
-                    <p class="text-gray-600">Set up automatic recurring expenses that are generated based on your schedule.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Employees</h3>
+                    <p class="text-gray-600">Set up automated contract management including work timesheets,leave management and work deligations</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-white-50 to-green-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
@@ -247,7 +247,7 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Budget Management</h3>
-                    <p class="text-gray-600">Set budgets for categories and get alerts when you're approaching limits.</p>
+                    <p class="text-gray-600">Set budgets for projects  and get alerts when you're approaching limits.</p>
                 </div>
 
                 <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
@@ -377,7 +377,7 @@
                 
                 <div>
                     <h4 class="font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <ul class="space-y-5 text-gray-400">
                         <li><a href="#" class="hover:text-white transition">Privacy</a></li>
                         <li><a href="#" class="hover:text-white transition">Terms</a></li>
                         <li><a href="#" class="hover:text-white transition">Security</a></li>
@@ -386,7 +386,7 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 ExpenseFlow. Built with the TALL Stack. All rights reserved.</p>
+                <p>&copy; 2026 Mier All rights reserved.</p>
             </div>
         </div>
     </footer>
