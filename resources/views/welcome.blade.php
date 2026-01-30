@@ -257,10 +257,10 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Real-time Updates</h3>
-                    <p class="text-gray-600">Livewire-powered interface updates instantly without page refreshes.</p>
+                    <p class="text-gray-600">Updates on the progress of Projects,execution stages and reporting</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                {{-- <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
                     <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
@@ -268,9 +268,9 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Category Tags</h3>
                     <p class="text-gray-600">Organize expenses with customizable categories and color-coded tags.</p>
-                </div>
+                </div> --}}
 
-                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+                {{-- <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
                     <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
@@ -278,7 +278,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Mobile Responsive</h3>
                     <p class="text-gray-600">Track expenses on any device with our fully responsive design.</p>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
