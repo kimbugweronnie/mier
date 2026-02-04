@@ -21,6 +21,7 @@ class EmployeeProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        
         Employee::observe(EmployeeObserver::class);
     }
 }
