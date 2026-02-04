@@ -15,7 +15,7 @@ class EmployeeObserver
     public function created(Employee $employee)
     {
         // runs AFTER insert — e.g., fire welcome email job
-        // dispatch(new \App\Jobs\SendWelcomeEmail($employee));
+        dispatch(new \App\Jobs\SendWelcomeEmail($employee));
     }
 
     public function updating(Employee $employee)
