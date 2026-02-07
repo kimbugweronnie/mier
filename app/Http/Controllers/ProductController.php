@@ -2,20 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\Product\ProductServiceInterface;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Services\Product\ProductServiceInterface;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\View\View;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\View\View;
 
 class ProductController extends Controller implements HasMiddleware
 {
     public function __construct(
         private ProductServiceInterface $productService
     ) {}
+
+    // public static function middleware(): array
+    // {
+    //     return [
+    //         function (Request $request, Closure $next) {
+    //             return $next($request);
+    //         },
+    //     ];
+    // }
 
     public static function middleware(): array
     {
@@ -25,22 +34,18 @@ class ProductController extends Controller implements HasMiddleware
             new Middleware('subscribed', except: ['store']),
         ];
     }
-   
 
     public function index(): View
     {
         $products = $this->productService->all();
+
         return view('products.index', compact('products'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-      
-
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.
@@ -48,9 +53,10 @@ class ProductController extends Controller implements HasMiddleware
     public function store(StoreProductRequest $request): RedirectResponse
     {
         $this->productService->create($request->validated());
+
         return redirect()
-        ->back()
-        ->with('success', 'Product created successfully');
+            ->back()
+            ->with('success', 'Product created successfully');
     }
 
     /**
@@ -59,8 +65,10 @@ class ProductController extends Controller implements HasMiddleware
     public function show(int $id): View
     {
         $product = $this->productService->find($id);
+
         return view('products.show', compact('product'));
     }
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -72,12 +80,14 @@ class ProductController extends Controller implements HasMiddleware
     /**
      * Update the specified resource in storage.
      */
-   public function update(UpdateProductRequest $request,int $id): RedirectResponse {
-    $product = $this->productService->find($id);
-    $this->productService->update($product, $request->validated());
-    return redirect()
-    ->back()
-    ->with('success', 'Product updated successfully');
+    public function update(UpdateProductRequest $request, int $id): RedirectResponse
+    {
+        $product = $this->productService->find($id);
+        $this->productService->update($product, $request->validated());
+
+        return redirect()
+            ->back()
+            ->with('success', 'Product updated successfully');
     }
 
     /**
@@ -87,8 +97,9 @@ class ProductController extends Controller implements HasMiddleware
     {
         $product = $this->productService->find($id);
         $this->productService->delete($product);
+
         return redirect()
-        ->back()
-        ->with('success', 'Product deleted successfully');
+            ->back()
+            ->with('success', 'Product deleted successfully');
     }
 }
