@@ -8,12 +8,23 @@ use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-class ProductController extends Controller
+class ProductController extends Controller implements HasMiddleware
 {
     public function __construct(
         private ProductServiceInterface $productService
     ) {}
+
+    public static function middleware(): array
+    {
+        return [
+            'auth',
+            new Middleware('log', only: ['index']),
+            new Middleware('subscribed', except: ['store']),
+        ];
+    }
    
 
     public function index(): View
