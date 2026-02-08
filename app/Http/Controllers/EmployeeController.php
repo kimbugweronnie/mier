@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Config;
 
 class EmployeeController extends Controller implements HasMiddleware    
 {
@@ -19,6 +20,7 @@ class EmployeeController extends Controller implements HasMiddleware
 
     public static function middleware(): array
     {
+        $dollarConfig = Config::get('rates.rates.USD');
         return [
             'auth',
             new Middleware('log', only: ['index']),
@@ -27,7 +29,10 @@ class EmployeeController extends Controller implements HasMiddleware
     }
     public function index()
     {
-        //
+        //// Generate URL using action()
+        $url = action([Tenant\ProductController::class, 'show'], ['tenant' => $tenant->id, 'product' => $product->id]);
+        $url = action([ProductController::class, 'show'], ['product' => 42]); 
+
     }
 
     /**
