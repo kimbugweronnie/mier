@@ -18,16 +18,40 @@ class Product extends Model
 
     protected static function booted()
     {
+        static::addGlobalScope(new ActiveScope);
+
         static::creating(function (Product $product) {
             $product->uuid = Str::uuid();
         });
         static::updated(function (Product $product) {
             Cache::forget('products');
         });
+        static::deleted(function (Product $product) {
+            Cache::forget('products');
+        });
+    }
+
+    // LOCAL SCOPE
+    public function scopeActive($query)
+    {
+        return $query->where('active', true);
+    }
+
+    public function scopeExpensive($query, $price)
+    {
+        return $query->where('price', '>', $price);
     }
 
     public function getAll(): Collection
     {
+        // Using local scope
+        $activeProducts = $this::active()->scopeExpensive(1000)->get();
+
+        // Removing global scope
+        $allProducts = $this::withoutGlobalScope(ActiveScope::class)->get();
+
+        return $allProducts;
+
         return $this::latest()->get();
     }
 
