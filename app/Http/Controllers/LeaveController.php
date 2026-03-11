@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Concurrency;
+
+
 
 
 class LeaveController extends Controller implements HasMiddleware
@@ -39,7 +44,12 @@ class LeaveController extends Controller implements HasMiddleware
      */
     public function show(string $id)
     {
-        //
+        [$userStats, $databaseReport] = Concurrency::run([
+            fn () => Cache::get('stats'),
+            fn () => DB::table('logs')->count(),
+        ]);
+        
+        return view('dashboard', compact('userStats', 'databaseReport'));
     }
 
     /**
