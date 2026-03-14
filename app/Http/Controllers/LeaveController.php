@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use App\Model\Leave;
+use App\Enums\LeaveStatus;
 
 
 class LeaveController extends Controller implements HasMiddleware
@@ -39,7 +41,7 @@ class LeaveController extends Controller implements HasMiddleware
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**
@@ -47,7 +49,8 @@ class LeaveController extends Controller implements HasMiddleware
      */
     public function update(Request $request, string $id)
     {
-        //
+        $leave = Leave::find(1);
+        $leave->transitionTo(LeaveStatus::Active);
     }
 
     /**

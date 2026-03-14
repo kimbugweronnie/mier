@@ -5,6 +5,8 @@ namespace App\Listeners;
 use App\Events\OrderShipped;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Jobs\Middleware\RateLimited;
+use App\Jobs\Middleware\TenantThrottleMiddleware;
+
 
 
 class SendShipmentNotification implements ShouldQueue
