@@ -60,7 +60,8 @@ class LeaveController extends Controller implements HasMiddleware
      */
     public function update(Request $request, string $id)
     {
-        //
+        $leave = Leave::find(1);
+        $leave->transitionTo(LeaveStatus::Active);
     }
 
     /**
