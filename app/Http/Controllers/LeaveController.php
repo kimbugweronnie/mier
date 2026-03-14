@@ -8,6 +8,7 @@ use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Concurrency;
+use App\Models\User
 
 
 
@@ -28,7 +29,9 @@ class LeaveController extends Controller implements HasMiddleware
     }
     public function index()
     {
-        //
+        User::chunk(100,function($users){
+            foreach($users as $user){
+            }
     }
 
     /**
