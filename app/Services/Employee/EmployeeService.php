@@ -21,6 +21,9 @@ class ProductService implements ProductServiceInterface
                 dispatch(new ProcessPayment($order));
             }
         }
+        $tenants = Tenants::whereHas('orders',function($query){
+            $query->where('status','pending');
+        })->get();
 
     }
 
