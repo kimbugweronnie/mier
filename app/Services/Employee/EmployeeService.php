@@ -26,6 +26,10 @@ class ProductService implements ProductServiceInterface
         })->get();
 
     }
+    public function employeeProjects()
+    {
+        return Employee::withCount('projects')->orderByDesc('projects_count')->get();
+    }
 
     public function create(array $data): Employee
     {
