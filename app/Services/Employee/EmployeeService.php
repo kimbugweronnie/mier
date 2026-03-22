@@ -26,9 +26,17 @@ class ProductService implements ProductServiceInterface
         })->get();
 
     }
+    //withCount
     public function employeeProjects()
     {
         return Employee::withCount('projects')->orderByDesc('projects_count')->get();
+    }
+    
+    //keyBy()
+     public function employeeProject($id)
+    {
+        $employees = Employee::keyBy('employee_id')->get($id);
+        
     }
 
     public function create(array $data): Employee
