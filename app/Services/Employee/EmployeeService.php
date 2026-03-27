@@ -11,6 +11,9 @@ class ProductService implements ProductServiceInterface
     {
         // return Employee::all();
         $tenants = Tenant::all();
+        //appraised
+        $appraised = Employee::wherePast('appraisal_date')->get();
+        $unappraised = Employee::whereFuture('appraisal_date')->get();
 
         foreach ($tenants as $tenant) {
             foreach (Order::where('tenant_id', $tenant->id)
