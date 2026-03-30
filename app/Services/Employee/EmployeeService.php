@@ -12,6 +12,10 @@ class ProductService implements ProductServiceInterface
         // return Employee::all();
         $tenants = Tenant::all();
         //appraised
+        $employee = tap(Employee::find($id),($employee){
+            $employee->update(['on_leave' => now()                  
+            ]);             
+        });
         $appraised = Employee::wherePast('appraisal_date')->get();
         $unappraised = Employee::whereFuture('appraisal_date')->get();
 
